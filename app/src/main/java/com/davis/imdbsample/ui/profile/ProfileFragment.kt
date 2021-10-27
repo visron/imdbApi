@@ -1,4 +1,4 @@
-package com.davis.imdbsample.ui.dashboard
+package com.davis.imdbsample.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.davis.imdbsample.R
 
-class DashboardFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -18,9 +16,8 @@ class DashboardFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+        val root = inflater.inflate(R.layout.fragment_profile, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
 
         return root
     }

@@ -18,6 +18,7 @@
             android:src="@drawable/ic_avenger" />
 
         <RelativeLayout
+            android:id="@+id/rlContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

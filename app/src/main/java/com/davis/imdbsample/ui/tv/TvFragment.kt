@@ -1,4 +1,4 @@
-package com.davis.imdbsample.ui.notifications
+package com.davis.imdbsample.ui.tv
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.davis.imdbsample.R
 
-class NotificationsFragment : Fragment() {
+class TvFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -18,8 +16,9 @@ class NotificationsFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
+
+        val root = inflater.inflate(R.layout.fragment_tv, container, false)
+        val textView: TextView = root.findViewById(R.id.text_dashboard)
 
         return root
     }

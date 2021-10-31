@@ -1,6 +1,8 @@
 package com.davis.imdbsample.network;
 
 import com.davis.imdbsample.BuildConfig;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.security.cert.CertificateException;
 import java.util.concurrent.TimeUnit;
@@ -14,16 +16,23 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class ApiClient {
-    Retrofit retrofit = null;
-    String baseUrl = "https://imdb-api.com/en/API/";
-    public Retrofit getApiClient(){
+    static Retrofit retrofit = null;
+    static String baseUrl = "https://imdb-api.com/en/API/";
+    public static Retrofit getApiClient(){
         if (retrofit==null){
+//            Gson gson = new GsonBuilder()
+//                    .setLenient()
+//                    .create();
             Retrofit.Builder retrofitBuilder = new Retrofit.Builder();
             retrofitBuilder.baseUrl(baseUrl);
-            retrofitBuilder.addConverterFactory(GsonConverterFactory.create());
+            //retrofitBuilder.addConverterFactory(GsonConverterFactory.create());
+            retrofitBuilder.addConverterFactory(ScalarsConverterFactory.create());
+
             retrofitBuilder.client(getUnsafeOkHttpClient().build());
+            retrofit = retrofitBuilder.build();
         }
         return retrofit;
 }

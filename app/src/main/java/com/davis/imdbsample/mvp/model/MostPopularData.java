@@ -6,9 +6,10 @@ import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MostPopularData {
+public class MostPopularData implements Serializable {
         @SerializedName("items")
         public List<MostPopularDataDetail> Items;
 
@@ -34,7 +35,7 @@ public class MostPopularData {
     public String ErrorMessage;
 
     @Entity(tableName = "mostpopular")
-        public static class MostPopularDataDetail
+        public static class MostPopularDataDetail implements Serializable
     {
         public MostPopularDataDetail() {
         }

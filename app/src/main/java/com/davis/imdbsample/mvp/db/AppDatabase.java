@@ -17,10 +17,7 @@ import com.davis.imdbsample.mvp.model.MostPopularData;
 import com.davis.imdbsample.mvp.model.MostPopularMovies;
 import com.davis.imdbsample.mvp.model.Top250Data;
 import com.davis.imdbsample.mvp.model.Top250Movies;
-import com.davis.imdbsample.util.RConverter;
-import com.davis.imdbsample.util.RConverterB;
-import com.davis.imdbsample.util.RoomConveter;
-import com.davis.imdbsample.util.RoomConveterA;
+
 
 @Database(entities = {Top250Data.Top250DataDetail.class, MostPopularData.MostPopularDataDetail.class, InTheaters.NewMovieDataDetail.class
                       , Top250Movies.Top250MoviesDataDetail.class, ComingSoon.ComingSoonDataDetail.class, MostPopularMovies.MostPopularMoviesDataDetail.class
@@ -39,6 +36,7 @@ public abstract class AppDatabase extends RoomDatabase
         if (appDbInstance==null){
             appDbInstance = Room.databaseBuilder(AppBaseActivity.context,AppDatabase.class,"imdb")
                     .fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
                    // .addTypeConverter(new RConverter())
                    // .addTypeConverter(new RConverterB())
                     .build();

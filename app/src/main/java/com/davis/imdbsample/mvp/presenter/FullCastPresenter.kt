@@ -4,6 +4,7 @@ import android.util.Log
 import com.davis.imdbsample.mvp.model.RequestModel
 import com.davis.imdbsample.mvp.model.ResponseListener
 import com.davis.imdbsample.mvp.model.Top250Data
+import com.davis.imdbsample.mvp.view.MoviesContract
 import com.davis.imdbsample.mvp.view.MoviesContract.presenter
 import com.davis.imdbsample.mvp.view.MoviesContract.view
 import com.google.gson.Gson
@@ -13,16 +14,16 @@ import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
 
-class FullCastPresenter(var requestModel: RequestModel, var view: view) : presenter {
+class FullCastPresenter(var requestModel: RequestModel, var view: MoviesContract.fullCastView) : presenter {
     var endpoints= listOf<String>("FullCast")
     override fun getData(params: String) {
         val responseListener: ResponseListener = object : ResponseListener {
-            override fun onSuccess(jsonObject: String) {
+            override fun onSuccess(jsonObject: Any) {
                 Log.d("jsonError", "presenter " + jsonObject)
 
                 try {
 //                    val accounts: List<BankAccount> = gson.fromJson<List<BankAccount>>(accountsListString, object : TypeToken<ArrayList<BankAccount?>?>() {}.type)
-                    val jsonObject1 = JSONObject(jsonObject)
+                    val jsonObject1 = JSONObject(jsonObject.toString())
                     var items = jsonObject1.getJSONArray("items")
                     var fullresponse = Gson().fromJson<Top250Data>(jsonObject.toString(), Top250Data::class.java)
                     Log.d("jsonResponse"," ${fullresponse.Items.get(0).toString()}")
@@ -33,13 +34,8 @@ class FullCastPresenter(var requestModel: RequestModel, var view: view) : presen
                                 var jsonObj = Gson().fromJson<Top250Data.Top250DataDetail>(singleString.toString(), Top250Data.Top250DataDetail::class.java)
 
                             }
-                            view.onTop250Movies(jsonObject1)
+                            //view.onCastLoaded(jsonObject1)
                         }
-                        endpoints[1] -> view.onTop250Shows(jsonObject1)
-                        endpoints[2] -> view.onMostPopularShows(jsonObject1)
-                        endpoints[3] -> view.onMostPopularTv(jsonObject1)
-                        endpoints[4] -> view.onInTheaters(jsonObject1)
-                        endpoints[5] -> view.onComingSoon(jsonObject1)
                     }
                 } catch (e: JSONException) {
                     Log.d("jsonError", "presenter " + e.toString())

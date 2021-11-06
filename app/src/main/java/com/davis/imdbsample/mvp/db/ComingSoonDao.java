@@ -13,13 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-//@TypeConverters(RoomConveter.class)
 public interface ComingSoonDao {
     @Query("SELECT * FROM comingSoon")
-    List<InTheaters.NewMovieDataDetail> getAll();
+    List<ComingSoon.ComingSoonDataDetail> getAll();
 
     @Query("SELECT * FROM comingSoon where title LIKE  :firstName OR fullTitle LIKE :lastName")
-    InTheaters.NewMovieDataDetail findByName(String firstName, String lastName);
+    ComingSoon.ComingSoonDataDetail findByName(String firstName, String lastName);
 
     @Query("SELECT COUNT(*) from comingSoon")
     int countIntheaters();

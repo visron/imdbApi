@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-//@TypeConverters(RoomConveter.class)
 
 public interface Top250MoviesDao {
     @Query("SELECT * FROM top250Movies")

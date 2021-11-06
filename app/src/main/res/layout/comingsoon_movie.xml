@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="140dp"
-    android:layout_height="210dp"
-    android:layout_margin="6dp"
+    android:layout_width="260dp"
+    android:layout_height="160dp"
+    android:layout_margin="8dp"
     app:cardCornerRadius="6dp">
 
     <FrameLayout
@@ -42,6 +42,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
+                android:visibility="gone"
                 android:background="@color/semi_transparent"
                 android:orientation="vertical">
 

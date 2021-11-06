@@ -8,13 +8,11 @@ import androidx.room.Query;
 import androidx.room.TypeConverters;
 
 import com.davis.imdbsample.mvp.model.Top250Data;
-import com.davis.imdbsample.util.RoomConveter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-//@TypeConverters(RoomConveter.class)
 
 public interface Top250Dao {
     @Query("SELECT * FROM top250")

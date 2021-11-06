@@ -9,13 +9,11 @@ import androidx.room.TypeConverters;
 
 import com.davis.imdbsample.mvp.model.InTheaters;
 import com.davis.imdbsample.mvp.model.Top250Data;
-import com.davis.imdbsample.util.RoomConveter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-//@TypeConverters(RoomConveter.class)
 public interface InTheatersDao {
     @Query("SELECT * FROM inTheaters")
     List<InTheaters.NewMovieDataDetail> getAll();

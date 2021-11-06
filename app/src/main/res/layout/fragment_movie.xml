@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F8F8F8"
     android:orientation="vertical"
+    android:layout_marginBottom="50dp"
     android:padding="@dimen/activity_vertical_margin">
 
     <LinearLayout
@@ -42,21 +43,24 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvComingSoon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin"
-                android:text="coming soon" />
+                android:layout_margin="@dimen/title_view_margin"
+                android:text="Coming Soon" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvComingSoon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin" />
+                android:layout_margin="@dimen/title_view_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin"
+                android:layout_margin="@dimen/title_view_margin"
                 android:orientation="horizontal">
 
                 <TextView
@@ -70,6 +74,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:id="@+id/tvSeeTop250Movies"
                     android:text="see all" />
             </LinearLayout>
 
@@ -77,12 +82,14 @@
                 android:id="@+id/rvTop250"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin" />
+                android:layout_margin="@dimen/title_view_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin"
+                android:layout_margin="@dimen/title_view_margin"
                 android:orientation="horizontal">
 
                 <TextView
@@ -96,6 +103,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:id="@+id/tvSeeTop250Shows"
                     android:text="see all" />
             </LinearLayout>
 
@@ -103,12 +111,14 @@
                 android:id="@+id/rvTopShows"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin" />
+                android:layout_margin="@dimen/title_view_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
   <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin"
+                android:layout_margin="@dimen/title_view_margin"
                 android:orientation="horizontal">
 
                 <TextView
@@ -122,6 +132,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:id="@+id/tvMostPopularMovies"
                     android:text="see all" />
             </LinearLayout>
 
@@ -129,12 +140,14 @@
                 android:id="@+id/rvPopularMovies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin" />
+                android:layout_margin="@dimen/title_view_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
   <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin"
+                android:layout_margin="@dimen/title_view_margin"
                 android:orientation="horizontal">
 
                 <TextView
@@ -148,6 +161,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:id="@+id/tvSeeMostPopularShows"
                     android:text="see all" />
             </LinearLayout>
 
@@ -155,12 +169,14 @@
                 android:id="@+id/rvPopularShows"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin" />
+                android:layout_margin="@dimen/title_view_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
   <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin"
+                android:layout_margin="@dimen/title_view_margin"
                 android:orientation="horizontal">
 
                 <TextView
@@ -174,6 +190,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:id="@+id/tvSeeInTheaters"
                     android:text="see all" />
             </LinearLayout>
 
@@ -181,7 +198,9 @@
                 android:id="@+id/rvTheaters"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_view_margin" />
+                android:layout_margin="@dimen/title_view_margin"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
 
         </LinearLayout>

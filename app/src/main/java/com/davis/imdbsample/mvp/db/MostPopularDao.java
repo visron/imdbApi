@@ -9,13 +9,12 @@ import androidx.room.TypeConverters;
 
 import com.davis.imdbsample.mvp.model.MostPopularData;
 import com.davis.imdbsample.mvp.model.Top250Data;
-import com.davis.imdbsample.util.RoomConveter;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-//@TypeConverters(RoomConveter.class)
 public interface MostPopularDao {
     @Query("SELECT * FROM mostpopular")
     List<MostPopularData.MostPopularDataDetail> getAll();

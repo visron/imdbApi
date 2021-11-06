@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-//@TypeConverters(RoomConveter.class)
 public interface MostPopularMoviesDao {
     @Query("SELECT * FROM mostpopularMovies")
     List<MostPopularMovies.MostPopularMoviesDataDetail> getAll();

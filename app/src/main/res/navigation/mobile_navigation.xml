@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_movie">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.davis.imdbsample.ui.home.HomeFragment"
+        android:id="@+id/navigation_movie"
+        android:name="com.davis.imdbsample.ui.movies.MovieFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_movie" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.davis.imdbsample.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_tv"
+        android:name="com.davis.imdbsample.ui.tv.TvFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_tv" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.davis.imdbsample.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_profile"
+        android:name="com.davis.imdbsample.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

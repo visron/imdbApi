@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">IMDBSample</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">MOVIES</string>
+    <string name="title_dashboard">TV</string>
+    <string name="title_notifications">PROFILE</string>
+    <string name="sample_rating">9<sup>.9</sup></string>
+    <string name="sample_year">0000</string>
+    <string name="sample_movie_title">MOVIE TITLE</string>
 </resources>
